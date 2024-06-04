@@ -1,6 +1,6 @@
-# Laravel 8 簡易部落格
+# Laravel 10 簡易部落格
 
-在靈感閃現的那一刻，使用您的電腦或移動設備，隨時用文字記錄您的想法和管理您的部落格。Laravel 8 簡易部落格主要是用的 [QuickAdminPanel](https://quickadminpanel.com) 生成的，除了一些定制代碼，可依需求彈性改造的工具。
+在靈感閃現的那一刻，使用您的電腦或移動設備，隨時用文字記錄您的想法和管理您的部落格。
 
 ## 使用方式
 - 把整個專案複製一份到你的電腦裡，這裡指的「內容」不是只有檔案，而是指所有整個專案的歷史紀錄、分支、標籤等內容都會複製一份下來。
@@ -20,9 +20,13 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate --seed
 ```
-- 執行安裝 Laravel Mix 引用的依賴項目，並執行所有 Mix 任務。
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
 ```sh
-$ npm install && npm run dev
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
 ```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以登入經由 `/login` 來進行登入，預設的電子郵件和密碼分別為 __admin@admin.com__ 和 __password__ 。
@@ -30,11 +34,11 @@ $ npm install && npm run dev
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/e5vp7zp.png)
+![](https://i.imgur.com/BirODI3.png)
 > 調整並統一您的文本、圖片風格和外觀
 
-![](https://i.imgur.com/cNCKrDg.png)
+![](https://i.imgur.com/3xB7WmF.png)
 > 分享您的想法並壯大您的觀衆群體
 
-![](https://i.imgur.com/MEN709x.png)
+![](https://i.imgur.com/J0sXyxy.png)
 > 建立一個令人印象深刻的網路形象，並贏得讀者的信任

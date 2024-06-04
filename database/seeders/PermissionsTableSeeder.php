@@ -22,6 +22,16 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => 3,
                 'title' => 'post_access',
             ],
+            /*
+            [
+                'id'    => 4,
+                'title' => 'post_edit',
+            ],
+            [
+                'id'    => 5,
+                'title' => 'post_delete',
+            ],
+            */
         ];
 
         Permission::insert($permissions);

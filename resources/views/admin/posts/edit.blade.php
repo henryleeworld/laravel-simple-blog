@@ -10,7 +10,7 @@
         <form method="POST" action="{{ route("admin.posts.update", [$post->id]) }}" enctype="multipart/form-data">
             @method('PUT')
             @csrf
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="title">{{ trans('cruds.post.fields.title') }}</label>
                 <input class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" type="text" name="title" id="title" value="{{ old('title', $post->title) }}" required>
                 @if($errors->has('title'))
@@ -20,7 +20,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.post.fields.title_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label for="categories">{{ trans('cruds.post.fields.categories') }}</label>
                 <div style="padding-bottom: 4px">
                     <span class="btn btn-info btn-xs select-all" style="border-radius: 0">{{ trans('global.select_all') }}</span>
@@ -38,7 +38,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.post.fields.categories_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label for="post_text">{{ trans('cruds.post.fields.post_text') }}</label>
                 <textarea class="form-control ckeditor {{ $errors->has('post_text') ? 'is-invalid' : '' }}" name="post_text" id="post_text">{!! old('post_text', $post->post_text) !!}</textarea>
                 @if($errors->has('post_text'))
@@ -48,7 +48,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.post.fields.post_text_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label for="attachment">{{ trans('cruds.post.fields.attachment') }}</label>
                 <div class="needsclick dropzone {{ $errors->has('attachment') ? 'is-invalid' : '' }}" id="attachment-dropzone">
                 </div>
@@ -59,7 +59,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.post.fields.attachment_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="start_date">{{ trans('cruds.post.fields.start_date') }}</label>
                 <input class="form-control datetime {{ $errors->has('start_date') ? 'is-invalid' : '' }}" type="text" name="start_date" id="start_date" value="{{ old('start_date', $post->start_date) }}" required>
                 @if($errors->has('start_date'))
@@ -69,7 +69,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.post.fields.start_date_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label class="required" for="end_date">{{ trans('cruds.post.fields.end_date') }}</label>
                 <input class="form-control datetime {{ $errors->has('end_date') ? 'is-invalid' : '' }}" type="text" name="end_date" id="end_date" value="{{ old('end_date', $post->end_date) }}" required>
                 @if($errors->has('end_date'))
@@ -79,7 +79,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.post.fields.end_date_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-3">
                 <label for="ip_address">{{ trans('cruds.post.fields.ip_address') }}</label>
                 <input class="form-control {{ $errors->has('ip_address') ? 'is-invalid' : '' }}" type="text" name="ip_address" id="ip_address" value="{{ old('ip_address', $post->ip_address) }}">
                 @if($errors->has('ip_address'))
@@ -89,7 +89,7 @@
                 @endif
                 <span class="help-block">{{ trans('cruds.post.fields.ip_address_helper') }}</span>
             </div>
-            <div class="form-group">
+            <div class="mb-0">
                 <button class="btn btn-danger" type="submit">
                     {{ trans('global.save') }}
                 </button>

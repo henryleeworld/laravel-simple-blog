@@ -10,7 +10,7 @@
                 </div>
 
                 <div class="card-body">
-                    <div class="form-group">
+                    <div class="mb-3">
                         <div class="row">
                             <div class="col-12">
                                 <div class="float-left mt-2 mr-2">
